@@ -3,8 +3,8 @@
 # Covid Vaccination
 The user is given two types of [TSV](https://www.geeksforgeeks.org/simple-ways-to-read-tsv-files-in-python/) files.
 
-* **User Meta file** :  Containing User info  like Gender and Age.
-* **Vaccination status files (this can be multiple files)** : Containing Vaccination  information for the user, like the vaccine the user took, date of vaccination in dd-mm-yyyy format and the details of the vaccine locations like city, state and country.
+* **User Meta file** :  Containing User info  like gender,city and state.
+* **Vaccination status files (this can be multiple files)** : Containing Vaccination  information for the user, like the vaccine the user took, date of vaccination in dd-mm-yyyy format.
 
 The goal of this task is to find number of users vaccinated by  city, state,  vaccine or gender.
 
