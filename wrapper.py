@@ -6,6 +6,7 @@ import os
 import unittest
 import sys
 
+
 def file_check(file_path):
     if os.path.isfile(file_path):
         return file_path
@@ -18,9 +19,11 @@ def main():
     subparsers.required = True
     parser_run = subparsers.add_parser("run", help="Use this subcommand to run the program")
     parser_test = subparsers.add_parser("test", help="Use this subcommand to test the program")
-    parser_run.add_argument("-v", "--vaccination_files", required=True, nargs="+", type=file_check, help="Path to the vaccination status TSV files")
-    parser_run.add_argument("-u", "--user_meta_file", required=True, type=file_check, help="Path to TSV user information file")
-    parser_run.add_argument("-o", "--output_file", required=True, help="Path to the TSV ouput file")
+    parser_run.add_argument("-v", "--vaccination_files", required=True, nargs="+", type=file_check,
+                            help="Path to the vaccination status TSV files")
+    parser_run.add_argument("-u", "--user_meta_file", required=True, type=file_check,
+                            help="Path to TSV user information file")
+    parser_run.add_argument("-o", "--output_file", required=True, help="Path to the TSV output file")
     args = parser.parse_args()
     if args.mode == "run":
         covid_vaccine(args.vaccination_files, args.user_meta_file, args.output_file)
